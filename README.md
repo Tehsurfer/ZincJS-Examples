@@ -1,2 +1,8 @@
 # ZincJS-Examples
-Examples for ZincJS
+
+Installation:
+
+```Shell
+$ npm install
+$ npm run build
+```
