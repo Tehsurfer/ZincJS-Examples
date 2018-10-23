@@ -12,6 +12,41 @@
 				margin: 0px;
 				overflow: hidden;
 			}
+
+			.slidecontainer {
+			    width: 100%;
+			}
+
+			.slider {
+			    -webkit-appearance: none;
+			    width: 100%;
+			    height: 25px;
+			    background: #383635;
+			    outline: none;
+			    opacity: 0.7;
+			    -webkit-transition: .2s;
+			    transition: opacity .2s;
+			}
+
+			.slider:hover {
+			    opacity: 1;
+			}
+
+			.slider::-webkit-slider-thumb {
+			    -webkit-appearance: none;
+			    appearance: none;
+			    width: 25px;
+			    height: 25px;
+			    background: #4CAF50;
+			    cursor: pointer;
+			}
+
+			.slider::-moz-range-thumb {
+			    width: 25px;
+			    height: 25px;
+			    background: #4CAF50;
+			    cursor: pointer;
+			}
 			#info {
 				color: #fff;
 				position: absolute;
@@ -32,10 +67,16 @@
 		<button name="View All" value="OK" type="button" onclick="main.viewAll()">View All</button>
 		<button name="Jaw" value="jaw" type="button" onclick="main.loadMyModel(this.value)">Jaw</button>
 		<button name="Beating Heart" value="beating_heart" type="button" onclick="main.loadMyModel(this.value)">Beating Heart</button>
-		<button name="foot" value="newfoot" type="button" onclick="main.loadMyModel(this.value)">Foot</button>
-		<button name="skin" value="skin" type="button" onclick="main.loadMyModel(this.value)">Skin</button>
 		<button name="materials" value="materials" type="button" onclick="main.loadMyModel(this.value)">materials</button>
 		<button name="deforming_heart" value="deforming_heart" type="button" onclick="main.loadMyModel(this.value)">Deforming Heart</button>
+
+		<div class="slidecontainer">
+		  <p>Time of video slider:</p>
+		  <input type="range" min="1" max="100" value="50" class="slider" id="vidSlider">
+		</div>
+
 		<script src="build/index.js"></script>
+
+
 	</body>
 </html>
